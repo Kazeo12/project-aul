@@ -39,7 +39,7 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 1.8em;
+    font-size: 13px;
     color: var(--color-text-light); /* Judul di header tetap putih */
 }
 
