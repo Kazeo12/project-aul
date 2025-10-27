@@ -1,0 +1,199 @@
+/* ==================================== */
+/* 1. Pengaturan Dasar dan Tema Warna Pink */
+/* ==================================== */
+
+:root {
+    --color-primary: #ff80ab;     /* Pink Tua (Header/Aksen) */
+    --color-secondary: #fce4ec;   /* Pink Sangat Muda (Background) */
+    --color-accent: #e91e63;      /* Pink Cerah (Tombol) */
+    --color-text-dark: #333;
+    --color-text-light: white;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-secondary);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #880e4f; /* Pink Gelap */
+}
+
+/* ==================================== */
+/* 2. Header dan Navigasi (Flexbox) */
+/* ==================================== */
+
+header {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding: 15px 20px;
+    display: flex; /* Menggunakan Flexbox */
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    color: var(--color-text-light); /* Judul di header tetap putih */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Flexbox untuk item navigasi */
+    gap: 25px;
+}
+
+nav a {
+    color: var(--color-text-light);
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: #f48fb1; /* Warna hover/active */
+}
+
+/* ==================================== */
+/* 3. Layout Konten Utama */
+/* ==================================== */
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white; /* Konten utama lebih terang */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+section {
+    padding: 20px 0;
+}
+
+.hero {
+    background-color: #f8bbd0; /* Pink lembut untuk Hero */
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #c2185b;
+}
+
+/* Penggunaan Grid untuk Galeri/Artikel */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.grid-item {
+    background-color: var(--color-secondary);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Formulir Kontak */
+.contact-form label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Agar padding tidak menambah lebar */
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* ==================================== */
+/* 4. Footer */
+/* ==================================== */
+
+footer {
+    background-color: #4a148c; /* Purple gelap untuk kontras */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+}
+
+/* ==================================== */
+/* 5. Responsif (Media Query) */
+/* ==================================== */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    header h1 {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column; 
+        gap: 5px;
+        width: 100%;
+    }
+
+    nav a {
+        display: block;
+        padding: 8px;
+    }
+
+    main {
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+}
